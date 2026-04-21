@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Last Light Collective — Your Story Matters</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --warmwhite:#faf8f4;
+  --cream:#f3efe7;
+  --linen:#ebe5d9;
+  --text:#3a3530;
+  --text-soft:#6b6158;
+  --gold:#b8922a;
+  --gold-light:#d4b95e;
+  --gold-wash:rgba(184,146,42,0.08);
+  --gold-border:rgba(184,146,42,0.2);
+  --sage:#7a8c6e;
+  --sage-light:rgba(122,140,110,0.1);
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--warmwhite);
+  color:var(--text);
+  font-family:'Lora',Georgia,serif;
+  font-size:18px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ═══ HEADER ═══ */
+header{
+  text-align:center;
+  padding:70px 24px 60px;
+  background:linear-gradient(180deg,var(--cream) 0%,var(--warmwhite) 100%);
+  border-bottom:1px solid var(--linen);
+}
+
+.logo-sigil{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  color:var(--gold);
+  letter-spacing:10px;
+  margin-bottom:20px;
+}
+
+header h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(32px,5.5vw,54px);
+  font-weight:400;
+  color:var(--text);
+  line-height:1.2;
+  margin-bottom:16px;
+}
+
+header h1 span{
+  display:block;
+  font-size:clamp(14px,2vw,18px);
+  font-family:'Lora',serif;
+  font-weight:400;
+  color:var(--text-soft);
+  letter-spacing:1px;
+  margin-top:14px;
+  font-style:italic;
+}
+
+/* ═══ CONTENT SECTIONS ═══ */
+.content{
+  max-width:680px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+section{
+  padding:56px 0;
+}
+
+section + section{
+  border-top:1px solid var(--linen);
+}
+
+h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(24px,3.5vw,32px);
+  font-weight:500;
+  color:var(--text);
+  margin-bottom:20px;
+  line-height:1.3;
+}
+
+p{
+  margin-bottom:16px;
+  color:var(--text);
+}
+
+p:last-child{margin-bottom:0;}
+
+.soft{color:var(--text-soft);}
+
+/* ═══ PULL QUOTE ═══ */
+.pull-quote{
+  padding:28px 32px;
+  margin:32px 0;
+  background:var(--gold-wash);
+  border-left:3px solid var(--gold);
+  border-radius:0 6px 6px 0;
+  font-style:italic;
+  font-size:20px;
+  line-height:1.6;
+  color:var(--text);
+}
+
+/* ═══ PROMISE CARDS ═══ */
+.promises{
+  display:grid;
+  gap:20px;
+  margin:32px 0;
+}
+
+.promise{
+  padding:24px 28px;
+  background:var(--cream);
+  border-radius:8px;
+  border:1px solid var(--linen);
+}
+
+.promise h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  font-weight:600;
+  color:var(--text);
+  margin-bottom:8px;
+}
+
+.promise p{
+  font-size:16px;
+  color:var(--text-soft);
+  margin:0;
+  line-height:1.6;
+}
+
+/* ═══ ABOUT BLOCK ═══ */
+.about-block{
+  padding:28px 32px;
+  background:var(--sage-light);
+  border-radius:8px;
+  margin:24px 0;
+}
+
+.about-block p{
+  font-size:16px;
+  line-height:1.7;
+  color:var(--text);
+}
+
+/* ═══ CTA SECTION ═══ */
+.cta-section{
+  text-align:center;
+  padding:64px 0 72px;
+  border-top:1px solid var(--linen);
+}
+
+.cta-section h2{
+  margin-bottom:12px;
+}
+
+.cta-section p{
+  color:var(--text-soft);
+  max-width:480px;
+  margin:0 auto 32px;
+  font-size:17px;
+}
+
+.cta-button{
+  display:inline-block;
+  padding:16px 40px;
+  background:var(--gold);
+  color:#fff;
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  font-weight:500;
+  letter-spacing:1px;
+  text-decoration:none;
+  border-radius:6px;
+  transition:background 0.3s ease, transform 0.2s ease;
+  border:none;
+  cursor:pointer;
+}
+
+.cta-button:hover{
+  background:var(--gold-light);
+  transform:translateY(-1px);
+}
+
+.cta-phone{
+  display:block;
+  margin-top:20px;
+  font-size:16px;
+  color:var(--text-soft);
+}
+
+.cta-phone a{
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* ═══ FAQ ═══ */
+.faq-item{
+  padding:20px 0;
+  border-bottom:1px solid var(--linen);
+}
+
+.faq-item:last-child{border-bottom:none;}
+
+.faq-item h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  font-weight:600;
+  color:var(--text);
+  margin-bottom:8px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.faq-item h3::before{
+  content:'+';
+  font-size:22px;
+  color:var(--gold);
+  font-weight:300;
+  min-width:20px;
+  text-align:center;
+  transition:transform 0.3s ease;
+}
+
+.faq-item.open h3::before{
+  content:'−';
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease, padding 0.3s ease;
+  padding-left:30px;
+}
+
+.faq-item.open .faq-answer{
+  max-height:300px;
+  padding-top:4px;
+}
+
+.faq-answer p{
+  font-size:16px;
+  color:var(--text-soft);
+  line-height:1.7;
+}
+
+/* ═══ FOOTER ═══ */
+footer{
+  text-align:center;
+  padding:40px 24px;
+  background:var(--cream);
+  border-top:1px solid var(--linen);
+}
+
+footer .logo-sigil{
+  margin-bottom:10px;
+}
+
+footer p{
+  font-size:14px;
+  color:var(--text-soft);
+}
+
+footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:600px){
+  header{padding:50px 20px 44px;}
+  section{padding:40px 0;}
+  .pull-quote{padding:22px 24px;font-size:18px;}
+  .promise{padding:20px 22px;}
+  body{font-size:17px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="logo-sigil">◊ ◈ ◊</div>
+  <h1>
+    The Last Light Collective
+    <span>Your story matters. We're here to listen.</span>
+  </h1>
+</header>
+
+<div class="content">
+
+  <!-- ═══ WHAT WE DO ═══ -->
+  <section>
+    <h2>What We Do</h2>
+    <p>The Last Light Collective sends trained volunteer listeners to sit with people in hospice, nursing homes, and memory care. We're not doctors. We're not therapists. We're not reporters.</p>
+    <p>We're people who believe that the stories you carry deserve to be heard&mdash;and that sitting with someone who truly listens is a gift that flows in both directions.</p>
+
+    <div class="pull-quote">
+      We don't come with clipboards or questions. We come with an open heart and the simple invitation: tell me.
+    </div>
+
+    <p>If you or your loved one would like a visitor who is there for one reason&mdash;to listen&mdash;we would be honored to sit with you.</p>
+  </section>
+
+  <!-- ═══ OUR PROMISES ═══ -->
+  <section>
+    <h2>Our Promises to You</h2>
+    <div class="promises">
+      <div class="promise">
+        <h3>No Pressure</h3>
+        <p>If you'd rather sit quietly, that's perfect. If you want to talk for an hour, that's perfect too. There is no agenda. You are in complete control.</p>
+      </div>
+      <div class="promise">
+        <h3>Complete Privacy</h3>
+        <p>Nothing you share will ever be published with your name or any details that could identify you. Your story belongs to you. We are simply honored to witness it.</p>
+      </div>
+      <div class="promise">
+        <h3>A Note for Your Family</h3>
+        <p>After each visit, we leave a handwritten note for your loved ones&mdash;a few words from a fellow traveler who has walked this road, letting them know they are not alone.</p>
+      </div>
+      <div class="promise">
+        <h3>Nothing for Sale</h3>
+        <p>This is not a business. Any proceeds from our published work are donated to organizations that serve people in hospice and end-of-life care.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOR FAMILIES ═══ -->
+  <section>
+    <h2>For Families</h2>
+    <p>If someone you love is in hospice, memory care, or a nursing home, you already know the weight of this time. You know the long hallways. You know the quiet hours. You know the feeling of wanting to do more and not knowing what more looks like.</p>
+    <p>A Last Light visit gives your loved one something simple and rare: the undivided attention of another human being who has nowhere else to be and nothing else to do but listen.</p>
+    <p>Our founder, Jacob, lost his own mother in 2025. He sat beside her for months as she approached the threshold. That experience taught him that the most powerful thing we can offer one another at the end is not answers. It's presence.</p>
+    <p class="soft" style="font-style:italic;">If you'd like a listener to visit your loved one, or if you'd like to know more before deciding, please reach out. There is no commitment. Just a conversation.</p>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section>
+    <h2>Common Questions</h2>
+
+    <div class="faq-item">
+      <h3>What happens during a visit?</h3>
+      <div class="faq-answer">
+        <p>Our listener arrives, introduces themselves by first name, and sits down at eye level. They may ask a gentle opening question&mdash;"What's on your mind today?" or "Tell me about a time you felt most alive"&mdash;but they follow your lead entirely. If you want to talk, they listen. If you want company without conversation, they stay quietly. A visit typically lasts 30 minutes to an hour, but there's no clock.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is anything recorded?</h3>
+      <div class="faq-answer">
+        <p>With your permission, we may use a small, unobtrusive recorder. This is entirely optional. If you'd prefer not to be recorded, we respect that completely&mdash;no questions asked. If you say yes and change your mind at any point, we stop immediately and delete what was captured.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>What do you do with the stories?</h3>
+      <div class="faq-answer">
+        <p>With time and care, we transform the seeds of what was shared into fictionalized narratives&mdash;short stories inspired by the emotional truths people share, but with all names, places, and identifying details changed. The goal is to honor the spirit of your experience while protecting your privacy completely. No one will ever be able to trace a published story back to you.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does this cost anything?</h3>
+      <div class="faq-answer">
+        <p>No. The Last Light Collective is a volunteer practice. There is no fee, no donation request, and no obligation of any kind.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Who is the listener?</h3>
+      <div class="faq-answer">
+        <p>Our founder, Jacob Thomas, is a father, a writer, and someone who recently lost his own mother. He holds a PhD from the University of Texas at Austin and a master's degree in clinical psychology from Columbia University. He has completed all required background checks and volunteer training. He comes to this work not as a professional, but as a son who learned how sacred it is to sit with someone and simply listen.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I stop a visit at any time?</h3>
+      <div class="faq-answer">
+        <p>Absolutely. You are always in control. If you'd like the listener to leave, they will thank you for your time and go&mdash;no explanation needed, no feelings hurt. Your comfort is the only thing that matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section>
+    <h2>About Jacob</h2>
+    <div class="about-block">
+      <p>My mother passed away in August 2025. For months before that, I sat beside her&mdash;sometimes talking, sometimes just being there. In those quiet hours, I learned that the most profound thing we can offer someone approaching the end of life is simply this: <em>I am here. I see you. Tell me.</em></p>
+      <p style="margin-top:12px;">I started the Last Light Collective because I can't go back to my mother's room. But I can walk into other rooms. And I can sit with people whose stories deserve a witness, and say the words I wish I'd said more often: <em>Tell me everything.</em></p>
+      <p style="margin-top:12px;font-style:italic;color:var(--text-soft);">&mdash; Jacob E. Thomas, PhD</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══ CTA ═══ -->
+<div class="content">
+  <section class="cta-section">
+    <h2>Get in Touch</h2>
+    <p>Whether you'd like a visit for yourself or a loved one, or you simply have questions, we'd love to hear from you.</p>
+    <a href="mailto:jethomasphd@gmail.com?subject=Last%20Light%20Collective%20%E2%80%94%20Inquiry" class="cta-button">Send Us a Message</a>
+    <span class="cta-phone">Or email directly: <a href="mailto:jethomasphd@gmail.com">jethomasphd@gmail.com</a></span>
+  </section>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="logo-sigil">◊ ◈ ◊</div>
+  <p>The Last Light Collective &middot; Georgetown, Texas</p>
+  <p style="margin-top:6px;font-style:italic;">Your story matters. We're here to listen.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item h3').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    // Toggle clicked
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
